@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90EC8B3282D499100428DD6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EC8B2282D499100428DD6 /* FavoritesView.swift */; };
+		B92F3EC028326D3900F7A70B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F3EBF28326D3900F7A70B /* MapView.swift */; };
+		B942302E28366E660014D96C /* WeatherCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B942302D28366E660014D96C /* WeatherCity.swift */; };
 		B9430637282BE89700F1C1EE /* SweetWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9430636282BE89700F1C1EE /* SweetWeatherApp.swift */; };
 		B9430639282BE89700F1C1EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9430638282BE89700F1C1EE /* ContentView.swift */; };
 		B943063B282BE89800F1C1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B943063A282BE89800F1C1EE /* Assets.xcassets */; };
 		B943063E282BE89800F1C1EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B943063D282BE89800F1C1EE /* Preview Assets.xcassets */; };
+		B961638D2835384100721CAC /* MiniCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961638C2835384100721CAC /* MiniCardView.swift */; };
+		B96EB26E2833C3C300F8E807 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96EB26D2833C3C300F8E807 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B90EC8B2282D499100428DD6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		B92F3EBF28326D3900F7A70B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B942302D28366E660014D96C /* WeatherCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCity.swift; sourceTree = "<group>"; };
 		B9430633282BE89700F1C1EE /* SweetWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9430636282BE89700F1C1EE /* SweetWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetWeatherApp.swift; sourceTree = "<group>"; };
 		B9430638282BE89700F1C1EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B943063A282BE89800F1C1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B943063D282BE89800F1C1EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B961638C2835384100721CAC /* MiniCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardView.swift; sourceTree = "<group>"; };
+		B96EB26D2833C3C300F8E807 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				B9430636282BE89700F1C1EE /* SweetWeatherApp.swift */,
 				B9430638282BE89700F1C1EE /* ContentView.swift */,
+				B90EC8B2282D499100428DD6 /* FavoritesView.swift */,
+				B92F3EBF28326D3900F7A70B /* MapView.swift */,
+				B96EB26D2833C3C300F8E807 /* CardView.swift */,
+				B942302D28366E660014D96C /* WeatherCity.swift */,
+				B961638C2835384100721CAC /* MiniCardView.swift */,
 				B943063A282BE89800F1C1EE /* Assets.xcassets */,
 				B943063C282BE89800F1C1EE /* Preview Content */,
 			);
@@ -77,6 +92,7 @@
 				B943062F282BE89700F1C1EE /* Sources */,
 				B9430630282BE89700F1C1EE /* Frameworks */,
 				B9430631282BE89700F1C1EE /* Resources */,
+				B9B384B6284F7AB60066A0AF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,13 +148,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B9B384B6284F7AB60066A0AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint\nelse \n    echo \"warning: SwiftLint not installed, download from: https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B943062F282BE89700F1C1EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B9430639282BE89700F1C1EE /* ContentView.swift in Sources */,
+				B961638D2835384100721CAC /* MiniCardView.swift in Sources */,
+				B92F3EC028326D3900F7A70B /* MapView.swift in Sources */,
 				B9430637282BE89700F1C1EE /* SweetWeatherApp.swift in Sources */,
+				B90EC8B3282D499100428DD6 /* FavoritesView.swift in Sources */,
+				B96EB26E2833C3C300F8E807 /* CardView.swift in Sources */,
+				B942302E28366E660014D96C /* WeatherCity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +316,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +346,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

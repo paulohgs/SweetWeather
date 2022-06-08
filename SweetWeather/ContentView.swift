@@ -6,16 +6,100 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+    
+    @State private var busca = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            
+            VStack(alignment: .leading, spacing: 0){
+                
+                // Primeira seção do app que contem o card com as info da cidade mais visitada
+                Section(
+                    header: Text("Most visited city")
+                        .font(.title2)
+                        .padding(.horizontal)
+                ) {
+                    
+                    NavigationLink(
+                        destination: Text("Segunda view")
+                    ){
+                        CardView(city: .citiesWeather)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color("text-card"), lineWidth: 1)
+                            )
+                            .frame(height: 80)
+                            .padding(.top, 10)
+                            .padding(.bottom, 20)
+                    }.padding(.horizontal)
+                }
+                
+                // Segunda seção que contem informações semanais do tempo
+                Section(
+                    header: Text("Week information")
+                        .font(.title2)
+                        .padding(.horizontal)
+                ){
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach((1...6), id: \.self) {_ in
+                                NavigationLink(
+                                    destination: Text("Segunda view"))
+                                {
+                                    MiniCardView()
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(Color("text-card"), lineWidth: 1)
+                                        )
+                                        .padding(.leading)
+
+                                }
+                            }
+                        }.padding(.vertical, 10)
+                    }
+                }
+                
+                Spacer()
+                
+                // Terceira seção do app que contem o mapa
+                Section(
+                    header: Text("Localization")
+                        .font(.title2)
+                        .padding(.horizontal)
+                ){
+                    NavigationLink(
+                        destination: MapView()){
+                            MapView()
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color("text-card"), lineWidth: 1)
+                                )
+                                .padding()
+                    }.headerProminence(.increased)
+                }
+            }
+            // Nome da navigationView e barra de pesquisa local
+            .navigationTitle("Sweet Weather")
+            .searchable(text: $busca)
+            .navigationBarItems(trailing: NavigationLink(destination: FavoritesView()){Text("Favoritos")})
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .preferredColorScheme(.dark)
+            ContentView()
+                .preferredColorScheme(.light)
+        }
+        
     }
 }

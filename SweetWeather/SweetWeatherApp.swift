@@ -13,5 +13,5 @@ struct SweetWeatherApp: App {
         WindowGroup {
             ContentView()
         }
-    }
+    }			
 }
