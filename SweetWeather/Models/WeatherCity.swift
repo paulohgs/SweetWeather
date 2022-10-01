@@ -11,8 +11,8 @@ struct WeatherCity {
     
     //stored properties
     var cityName: String
-    private var maxTemp: Double
-    private var minTemp: Double
+    var maxTemp: Double
+    var minTemp: Double
     var weatherDay: String
     
     //computed properties
