@@ -28,7 +28,7 @@ struct FavoritesView: View {
                     }.sheet(isPresented: $showingSheet) {
                         // FavoritesItemView(showingSheet: $showingSheet)
                         NavigationView {
-                            Text("Arrasta pra baixo!!!")
+                            DetailView(city: WeatherCity(cityName: "Fortaleza", maxTemp: 30, minTemp: 29, weatherDay: "Nublado"))
                                 .toolbar {
                                     ToolbarItem(placement: .primaryAction) {
                                         Button("Done", role: .destructive) {
