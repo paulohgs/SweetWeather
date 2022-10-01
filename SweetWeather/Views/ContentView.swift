@@ -11,8 +11,19 @@ import MapKit
 struct ContentView: View {
     
     @State private var busca = ""
-    
+    @State var start = 0
+
     var body: some View {
+        ZStack{
+            if start == 0 {
+                emptyState
+            } else {
+                program
+            }
+        }
+    }
+
+    var program: some View {
         
         NavigationView {
             
@@ -81,7 +92,7 @@ struct ContentView: View {
                                         .stroke(Color("text-card"), lineWidth: 1)
                                 )
                                 .padding()
-                    }.headerProminence(.increased)
+                        }.headerProminence(.increased)
                 }
             }
             // Nome da navigationView e barra de pesquisa local
@@ -90,16 +101,28 @@ struct ContentView: View {
             .navigationBarItems(trailing: NavigationLink(destination: FavoritesView()){Text("Favoritos")})
         }
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView()
-                .preferredColorScheme(.dark)
-            ContentView()
-                .preferredColorScheme(.light)
+    var emptyState: some View {
+        Image(systemName: "nameYourImage")
+            .resizable()
+            .scaledToFill()
+            .task {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+                    start = 1
+                }
+            }
+    }
+
+
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            Group {
+                ContentView()
+                    .preferredColorScheme(.dark)
+                ContentView()
+                    .preferredColorScheme(.light)
+            }
+
         }
-        
     }
 }
