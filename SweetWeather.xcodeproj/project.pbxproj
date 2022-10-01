@@ -16,6 +16,7 @@
 		B943063E282BE89800F1C1EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B943063D282BE89800F1C1EE /* Preview Assets.xcassets */; };
 		B961638D2835384100721CAC /* MiniCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961638C2835384100721CAC /* MiniCardView.swift */; };
 		B96EB26E2833C3C300F8E807 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96EB26D2833C3C300F8E807 /* CardView.swift */; };
+		D62CE84428E8A77500DC8A33 /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62CE84328E8A77500DC8A33 /* FavoritesItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B943063D282BE89800F1C1EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B961638C2835384100721CAC /* MiniCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardView.swift; sourceTree = "<group>"; };
 		B96EB26D2833C3C300F8E807 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D62CE84328E8A77500DC8A33 /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B9430636282BE89700F1C1EE /* SweetWeatherApp.swift */,
 				B9430638282BE89700F1C1EE /* ContentView.swift */,
 				B90EC8B2282D499100428DD6 /* FavoritesView.swift */,
+				D62CE84328E8A77500DC8A33 /* FavoritesItemView.swift */,
 				B92F3EBF28326D3900F7A70B /* MapView.swift */,
 				B96EB26D2833C3C300F8E807 /* CardView.swift */,
 				B942302D28366E660014D96C /* WeatherCity.swift */,
@@ -180,6 +183,7 @@
 				B90EC8B3282D499100428DD6 /* FavoritesView.swift in Sources */,
 				B96EB26E2833C3C300F8E807 /* CardView.swift in Sources */,
 				B942302E28366E660014D96C /* WeatherCity.swift in Sources */,
+				D62CE84428E8A77500DC8A33 /* FavoritesItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

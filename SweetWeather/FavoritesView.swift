@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @State private var showingSheet: Bool = false
+    @State var showingSheet: Bool = false
     
     var body: some View {
         
@@ -27,17 +27,7 @@ struct FavoritesView: View {
                                 .frame(height: 80)
                                 .padding()
                         }.sheet(isPresented: $showingSheet) {
-                            NavigationView {
-                                Text("Arrasta pra baixo!!!")
-                                    .toolbar {
-                                        ToolbarItem(placement: .primaryAction) {
-                                            Button(action: {
-                                                self.showingSheet = false
-                                            }) {
-                                                Text("Done").fontWeight(.semibold)
-                                            }
-                                        }
-                                    }
+                            FavoritesItemView(showingSheet: $showingSheet)
                             }
                         }
                     }
@@ -47,7 +37,7 @@ struct FavoritesView: View {
 //            .navigationBarTitleDisplayMode(.inline)
         }
     }
-}
+
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
