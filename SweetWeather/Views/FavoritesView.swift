@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavoritesView: View {
 
-    @State private var showingSheet: Bool = false
+    @State var showingSheet: Bool = false
 
     var body: some View {
         ScrollView(.vertical) {
@@ -26,6 +26,7 @@ struct FavoritesView: View {
                             .frame(height: 80)
                             .padding()
                     }.sheet(isPresented: $showingSheet) {
+                        // FavoritesItemView(showingSheet: $showingSheet)
                         NavigationView {
                             DetailView(city: WeatherCity(cityName: "Fortaleza", maxTemp: 30, minTemp: 29, weatherDay: "Nublado"))
                                 .toolbar {
@@ -46,6 +47,11 @@ struct FavoritesView: View {
     }
 
 }
+
+<<<<<<< HEAD
+=======
+}
+>>>>>>> c8b01d5 (feat: solving swiftlint warnings and removing the duplicated navigation controller)
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
